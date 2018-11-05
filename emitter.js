@@ -61,8 +61,8 @@ function getEmitter() {
                 });
             }
 
-            if (event.indexOf('.') !== -1) {
-                this.emit(event.substring(0, event.indexOf('.')));
+            if (event.lastIndexOf('.') !== -1) {
+                this.emit(event.substring(0, event.lastIndexOf('.')));
             }
 
             return this;
